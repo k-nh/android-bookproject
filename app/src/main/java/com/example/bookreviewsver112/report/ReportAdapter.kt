@@ -35,7 +35,7 @@ class ReportAdapter(
 
     override fun onBindViewHolder(holder: ReportViewHolder, position: Int) {
         holder.titleText.text = item!![position].titleText
-        holder.contentsText.text = item[position].contentsText
+        holder.contentsText.text = item!![position].contentsText
     }
 
 

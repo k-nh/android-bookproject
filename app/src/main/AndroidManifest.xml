@@ -9,15 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".home.HomeActivity">
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".home.HomeActivity"/>
+
+        <activity android:name=".login.LoginMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".login.FindIdActivity"/>
+        <activity android:name=".login.FindId2Activity"/>
+        <activity android:name=".login.FindPasswordActivity"/>
+        <activity android:name=".login.FindPassword2Activity"/>
+        <activity android:name=".login.JoinActivity"/>
+
         <activity android:name=".report.ReportListActivity"/>
         <activity android:name=".report.ReportPostActivity"/>
         <activity android:name=".report.ReportWriterActivity"/>
