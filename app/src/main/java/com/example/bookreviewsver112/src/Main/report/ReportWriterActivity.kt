@@ -1,21 +1,18 @@
-package com.example.bookreviewsver112.report
+package com.example.bookreviewsver112.src.report
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import com.example.bookreviewsver112.R
+import com.example.bookreviewsver112.config.BaseActivity
+import com.example.bookreviewsver112.databinding.ActivityReportPostBinding
 import com.example.bookreviewsver112.databinding.ActivityReportWriteBinding
-import org.w3c.dom.Text
 import java.lang.Exception
 
-class ReportWriterActivity : AppCompatActivity() {
+class ReportWriterActivity : BaseActivity<ActivityReportWriteBinding>(ActivityReportWriteBinding::inflate) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityReportWriteBinding.inflate(layoutInflater)
 
         val saveButton = binding.btReportSave as Button
         val titleText = binding.etReportTitle as EditText

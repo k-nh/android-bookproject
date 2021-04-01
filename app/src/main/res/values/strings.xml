@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BookReviews.Ver.1.1.2</string>
+    <string name="kakao_app_key">174b184e053e2b34aeef834df655f97d</string>
+    <string name="naver_client_id">NDTX9Q5B8b4mNpvfabMt</string>
+    <string name="naver_client_secret">NDTX9Q5B8b4mNpvfabMt</string>
+    <string name="naver_client_name">bookreviewsver112</string>
+    <string name="BEST_SELLER_API_KEY">C3695C0CB1DF5D86A460998D4C0DEFFA558081E91FB6484162C38261119EB3DF</string>
 </resources>

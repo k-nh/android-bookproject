@@ -1,12 +1,9 @@
-package com.example.bookreviewsver112.report
+package com.example.bookreviewsver112.src.report
 
-import android.content.Context
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookreviewsver112.R
 
@@ -35,7 +32,7 @@ class ReportAdapter(
 
     override fun onBindViewHolder(holder: ReportViewHolder, position: Int) {
         holder.titleText.text = item!![position].titleText
-        holder.contentsText.text = item[position].contentsText
+        holder.contentsText.text = item!![position].contentsText
     }
 
 
