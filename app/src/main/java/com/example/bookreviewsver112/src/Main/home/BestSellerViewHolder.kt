@@ -28,7 +28,7 @@ class BestSellerViewHolder (itemView: View): RecyclerView.ViewHolder(itemView){
     private val bookTitle = itemView.findViewById<TextView>(R.id.tv_book_title)
     private val bookAuthor = itemView.findViewById<TextView>(R.id.tv_book_author)
     private val bookPublisher = itemView.findViewById<TextView>(R.id.tv_book_publisher)
-//    private val bookDescription = itemView.findViewById<TextView>(R.id.tv_description)
+    private val bookDescription = itemView.findViewById<TextView>(R.id.tv_description)
 //    private val bookAdd = itemView.findViewById<TextView>(R.id.iv_add)
     private val bookLikeFalse = itemView.findViewById<ImageView>(R.id.iv_favorite_false)
     private val bookLikeTrue = itemView.findViewById<ImageView>(R.id.iv_favorite_true)
@@ -52,6 +52,7 @@ class BestSellerViewHolder (itemView: View): RecyclerView.ViewHolder(itemView){
         bookTitle.text = BestSellerItem.title
         bookAuthor.text = BestSellerItem.author
         bookPublisher.text = BestSellerItem.publisher
+        bookDescription.text = BestSellerItem.description
 
         bookLikeFalse.setOnClickListener(View.OnClickListener {
             BestSellerItem.favorite = true

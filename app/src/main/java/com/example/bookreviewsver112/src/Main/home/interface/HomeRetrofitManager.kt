@@ -5,6 +5,7 @@ import com.example.application.config.MyApplication
 import com.example.bookreviewsver112.src.Main.home.`interface`.API.BASE_URL
 import com.example.bookreviewsver112.src.Main.home.`interface`.Constants.TAG
 import com.example.bookreviewsver112.src.Main.home.model.BestSellerData
+import com.example.bookreviewsver112.src.Main.home.model.SearchData
 import com.example.bookreviewsver112.src.home.`interface`.HomeRetrofitInterface
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
@@ -70,6 +71,64 @@ class HomeRetrofitManager {
                                 parasedBestSellerDataArray.add(BestSellerItem)
 }
                             completion(RESPONSE_STATE.OKAY, parasedBestSellerDataArray)
+                        }
+                    }
+                }
+
+            }
+
+            override fun onFailure(call: Call<JsonElement>, t: Throwable) {
+                Log.d(TAG,"retrofitmanager - onFailure / t: $t")
+                completion(RESPONSE_STATE.FAIL, null)
+            }
+
+        })
+    }
+
+    fun getSearchBook(key: String, query: String, output: String, completion: (RESPONSE_STATE, ArrayList<SearchData>?) -> Unit){
+        val call = HomeRetrofit?.getSearchBook(key = API.CLIENT_ID, query = query, output = output).let{
+            it
+        }?: return
+
+        call.enqueue(object : retrofit2.Callback<JsonElement>{
+            override fun onResponse(
+                call: Call<JsonElement>,
+                response: Response<JsonElement>
+            ) {
+                Log.d(TAG,"retrofitmanager searchBook - onResponse / response : ${response.body()}")
+
+                when(response.code()){
+                    200 -> {
+                        response.body()?.let {
+                            val parasedSearchDataArray = ArrayList<SearchData>()
+                            val body = it.asJsonObject
+                            val results = body.getAsJsonArray("item")
+
+                            Log.d(TAG,"retrofit manager searchBook - onResponse() called")
+                            results.forEach { resultItem ->
+                                val Item : JsonObject = resultItem.asJsonObject
+                                val ItemId : Int = Item.get("itemId").asInt
+                                val coverImgUrl : String = Item.get("coverLargeUrl").asString
+                                val title : String = Item.get("title").asString
+                                val author : String = Item.get("author").asString
+                                val publisher : String = Item.get("publisher").asString
+                                val description : String = Item.get("description").asString
+                                val pubDate : String = Item.get("pubDate").asString
+                                val parser = SimpleDateFormat("yyyymmdd")
+                                val formatter = SimpleDateFormat("yyyy년 mm월 dd일")
+                                val outputPubDate = formatter.format(parser.parse(pubDate))
+
+                                val SearchItem = SearchData(
+                                                                    itemId = ItemId,
+                                                                    coverImgUrl = coverImgUrl,
+                                                                    title = title,
+                                                                    author = author,
+                                                                    publisher = publisher,
+                                                                    description = description,
+                                                                    pubDate = outputPubDate, favorite = false)
+                                parasedSearchDataArray.add(SearchItem)
+}
+                            completion(RESPONSE_STATE.OKAY, parasedSearchDataArray)
                         }
                     }
                 }

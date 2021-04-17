@@ -3,6 +3,27 @@
     package="com.example.bookreviewsver112">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
 
     <application
         android:name="com.example.application.config.MyApplication"
@@ -13,7 +34,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".src.Main.home.BestSellerViewHolder"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".src.report.login.LoginMainActivity">
             <intent-filter>
@@ -22,6 +42,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".src.Main.report.vision.TextExtractActivity"/>
         <activity android:name=".src.Find.FindIdActivity" />
         <activity android:name=".src.Find.FindId2Activity" />
         <activity android:name=".src.Find.FindPasswordActivity" />
@@ -29,6 +50,7 @@
         <activity android:name=".src.report.login.JoinActivity" />
         <activity android:name=".src.report.ReportPostActivity" />
         <activity android:name=".src.report.ReportWriterActivity" />
+        <activity android:name=".src.Main.home.BookDetailActivity" />
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

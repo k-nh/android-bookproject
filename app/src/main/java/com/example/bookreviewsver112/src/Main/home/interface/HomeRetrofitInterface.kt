@@ -15,4 +15,12 @@ interface HomeRetrofitInterface {
         @Query("key") key : String,
         @Query("categoryId") categoryId : Int,
         @Query("output") output : String) : Call<JsonElement>
+
+    @GET(API.GET_SEARCH_BOOK)
+    fun getSearchBook(
+            @Query("key") key : String,
+            @Query("query") query : String,
+            @Query("output") output : String) : Call<JsonElement>
+
+
 }

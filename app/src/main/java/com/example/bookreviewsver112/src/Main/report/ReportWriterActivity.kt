@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.bookreviewsver112.config.BaseActivity
 import com.example.bookreviewsver112.databinding.ActivityReportPostBinding
 import com.example.bookreviewsver112.databinding.ActivityReportWriteBinding
+import com.example.bookreviewsver112.src.Main.report.vision.TextExtractActivity
+import com.example.bookreviewsver112.src.report.login.LoginMainActivity
 import java.lang.Exception
 
 class ReportWriterActivity : BaseActivity<ActivityReportWriteBinding>(ActivityReportWriteBinding::inflate) {
@@ -17,6 +19,7 @@ class ReportWriterActivity : BaseActivity<ActivityReportWriteBinding>(ActivityRe
         val saveButton = binding.btReportSave as Button
         val titleText = binding.etReportTitle as EditText
         val contentsText = binding.etReportContents as EditText
+        val TextExtractButton = binding.btTextExtract
 
         var titleData = ""
         var contentsData = ""
@@ -30,6 +33,11 @@ class ReportWriterActivity : BaseActivity<ActivityReportWriteBinding>(ActivityRe
         if (extras != null) {
             contentsData = extras.getString("contentsData").toString()
             contentsText.setText(contentsData)
+        }
+
+        TextExtractButton.setOnClickListener {
+            val Intent = Intent(this, TextExtractActivity::class.java)
+            startActivity(Intent)
         }
 
         saveButton!!.setOnClickListener {
@@ -54,5 +62,7 @@ class ReportWriterActivity : BaseActivity<ActivityReportWriteBinding>(ActivityRe
         }
         setContentView(binding.root)
     }
+
+
 
 }
