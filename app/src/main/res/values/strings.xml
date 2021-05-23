@@ -3,7 +3,7 @@
     <string name="kakao_app_key">174b184e053e2b34aeef834df655f97d</string>
     <string name="naver_client_id">NDTX9Q5B8b4mNpvfabMt</string>
     <string name="naver_client_secret">NDTX9Q5B8b4mNpvfabMt</string>
-    <string name="naver_client_name">bookreviewsver112</string>
+    <string name="naver_client_name">bookreviewsver</string>
     <string name="BEST_SELLER_API_KEY">C3695C0CB1DF5D86A460998D4C0DEFFA558081E91FB6484162C38261119EB3DF</string>
     <string name="action_settings">Settings</string>
     <string name="image_details_header">Details:</string>
@@ -14,5 +14,8 @@
     <string name="dialog_select_camera">Camera</string>
     <string name="dialog_select_gallery">Gallery</string>
     <string name="image_picker_error">Something is wrong with that image. Pick a different one please.</string>
+    <string name="LoadingMessage">잠시만 기다려주세요.결과가 여기에 나타납니다.</string>
+    <string name="CompleteMessage">문자인식이 완료되었습니다.</string>
+
 
 </resources>

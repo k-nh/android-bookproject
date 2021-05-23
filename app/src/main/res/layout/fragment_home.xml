@@ -29,16 +29,6 @@
             android:text="검색"
             android:textColor="@color/white">
         </Button>
-
-        <ImageButton
-            android:id="@+id/btn_home_search_camera"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="8sp"
-            android:layout_marginEnd="8sp"
-            android:layout_marginRight="8sp"
-            app:srcCompat="@android:drawable/ic_menu_camera" />
     </LinearLayout>
 
     <ScrollView
@@ -60,9 +50,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:text="Best Seller"
+                    android:text="BEST SELLER"
+                    android:layout_gravity="center"
                     android:textColor="@color/pink"
-                    android:textSize="28dp"
+                    android:textSize="25dp"
                     android:textStyle="bold"></TextView>
                 <View
                     android:layout_width="0dp"
@@ -72,20 +63,20 @@
                 <Button
                     android:id="@+id/btn_domestic_book"
                     android:background="@drawable/round_shape"
-                    android:layout_width="wrap_content"
+                    android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
                     android:layout_margin="4dp"
-                    android:text="국내 도서"></Button>
+                    android:text="국내"></Button>
 
                 <Button
                     android:id="@+id/btn_foreign_book"
                     android:background="@drawable/round_shape"
-                    android:layout_width="wrap_content"
+                    android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
                     android:layout_margin="4dp"
-                    android:text="외국 도서"></Button>
+                    android:text="해외"></Button>
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -95,10 +86,6 @@
                 android:paddingBottom="100dp"></androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
     </ScrollView>
-
-
-
-
 
 
 </LinearLayout>

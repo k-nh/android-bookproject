@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "51440402246",
+    "project_id": "bookreviewproject-9010e",
+    "storage_bucket": "bookreviewproject-9010e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51440402246:android:31da4204b25966566aaf47",
+        "android_client_info": {
+          "package_name": "com.example.bookreviewsver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51440402246-52vs4mnvi09a1psr1pm9i3iu96khomk2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfxjlsqFXCRSruAImGS8cM9y0bq5Wpo0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "51440402246-52vs4mnvi09a1psr1pm9i3iu96khomk2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
