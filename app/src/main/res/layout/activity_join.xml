@@ -4,20 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:layout_marginBottom="20dp">
+
+    <ImageView
+        android:id="@+id/logo"
+
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:src="@drawable/splash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
     <TextView
         android:id="@+id/tv_join_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="35dp"
         android:text="아이디"
-        android:textColor="#8D8D8D"
-        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/titlecolor"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/logo" />
 
     <EditText
         android:id="@+id/et_join_id"
@@ -30,6 +44,7 @@
         android:layout_marginRight="8dp"
         android:ems="10"
         android:hint="아이디"
+        android:textSize="16sp"
         android:inputType="textLongMessage"
         android:textColor="#8D8D8D"
         app:layout_constraintEnd_toStartOf="@+id/btn_join_id"
@@ -40,11 +55,11 @@
         android:id="@+id/btn_join_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:text="중복확인"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:text="확인"
         android:textColor="#8D8D8D"
-        app:backgroundTint="#F2F2F2"
+        app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_join_id" />
 
@@ -54,10 +69,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="비밀번호"
-        android:textColor="#8D8D8D"
-        android:textSize="18sp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/titlecolor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_join_id" />
 
@@ -72,6 +88,7 @@
         android:layout_marginRight="24dp"
         android:ems="10"
         android:hint="비밀번호"
+        android:textSize="16sp"
         android:inputType="textPassword"
         android:textColor="#8D8D8D"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,10 +101,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="비밀번호 확인"
-        android:textColor="#8D8D8D"
-        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/titlecolor"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_join_password" />
 
@@ -102,6 +120,7 @@
         android:layout_marginRight="24dp"
         android:ems="10"
         android:hint="비밀번호 확인"
+        android:textSize="16sp"
         android:inputType="textPassword"
         android:textColor="#8D8D8D"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,72 +128,18 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_join_password2" />
 
     <TextView
-        android:id="@+id/tv_join_password_same"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:text="일치합니다."
-        android:textColor="#8D8D8D"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_join_password2" />
-
-    <TextView
-        android:id="@+id/tv_join_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
-        android:text="닉네임"
-        android:textColor="#8D8D8D"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_join_password_same" />
-
-    <EditText
-        android:id="@+id/et_join_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:ems="10"
-        android:hint="닉네임"
-        android:inputType="textPersonName"
-        android:textColor="#8D8D8D"
-        app:layout_constraintEnd_toStartOf="@+id/btn_join_name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_join_name" />
-
-    <Button
-        android:id="@+id/btn_join_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:text="중복확인"
-        android:textColor="#8D8D8D"
-        app:backgroundTint="#F2F2F2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_join_name" />
-
-    <TextView
         android:id="@+id/tv_join_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="이메일"
-        android:textColor="#8D8D8D"
-        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/titlecolor"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_join_name" />
+        app:layout_constraintTop_toBottomOf="@+id/et_join_password2" />
 
     <EditText
         android:id="@+id/et_join_email"
@@ -183,27 +148,15 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:ems="10"
-        android:hint="이메일"
-        android:inputType="textEmailAddress"
-        android:textColor="#8D8D8D"
-        app:layout_constraintEnd_toStartOf="@+id/btn_join_email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_join_email" />
-
-    <Button
-        android:id="@+id/btn_join_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:text="중복확인"
+        android:ems="10"
+        android:hint="이메일"
+        android:textSize="16sp"
+        android:inputType="textEmailAddress"
         android:textColor="#8D8D8D"
-        app:backgroundTint="#F2F2F2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_join_email" />
 
     <Button
@@ -216,7 +169,8 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:text="가입하기"
-        android:textColor="#8D8D8D"
+        android:textSize="15sp"
+        android:textColor="@color/titlecolor"
         app:backgroundTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

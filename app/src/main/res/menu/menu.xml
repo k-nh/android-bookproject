@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group
+        android:id="@+id/book"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/BookDetailFragment"
+            android:icon="@drawable/ic_bottom_navigation_book"
+            android:title="해당 도서" />
+        <item
+            android:id="@+id/CBreportFragment"
+            android:icon="@drawable/ic_baseline_article_24"
+            android:title="해당 도서 관련 피드 목록" />
+        <item
+            android:id="@+id/CBchatFragment"
+            android:icon="@drawable/ic_bottom_navigation_group_24"
+            android:title="해당 도서 관련 채팅방 목록" />
+   
+        <item
+            android:id="@+id/mainActivity"
+            android:icon="@drawable/ic_bottom_navigation_home_24"
+            android:title="홈 화면" />
+    </group>
+
+</menu>
+
+<!--<item android:title=”Technologies”>-->
+<!--<menu>-->
+<!--<item-->
+<!--    android:id=”@+id/nav_share”-->
+<!--android:icon=”@drawable/ic_menu_share”-->
+<!--android:title=”Spring” />-->
+<!--<item-->
+<!--    android:id=”@+id/nav_send”-->
+<!--android:icon=”@drawable/ic_menu_send”-->
+<!--android:title=”Hibernate” />-->
+<!--</menu>-->
+<!--    </item>-->
+
+<!--    </menu>-->

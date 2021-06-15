@@ -10,13 +10,13 @@
         android:icon="@drawable/ic_bottom_navigation_book"
         android:title="Report" />
     <item
-        android:id="@+id/menu_bottom_favorit"
-        android:icon="@drawable/ic_bottom_navigation_heart_24"
-        android:title="Favorit" />
+        android:id="@+id/menu_bottom_recommend"
+        android:icon="@drawable/ic_baseline_text_fields_24"
+        android:title="Extract" />
     <item
-        android:id="@+id/menu_bottom_group"
+        android:id="@+id/menu_bottom_chat"
         android:icon="@drawable/ic_bottom_navigation_forum_24"
-        android:title="Group" />
+        android:title="Chat" />
     <item
         android:id="@+id/menu_bottom_mypage"
         android:icon="@drawable/ic_bottom_navigation_person_24"

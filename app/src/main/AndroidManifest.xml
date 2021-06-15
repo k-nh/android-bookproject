@@ -1,33 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bookreviewsver112">
+    package="com.example.bookreviewsver">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 저장소 읽기 권한 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 저장소 쓰기 권한 -->
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
 
     <application
+        android:name="com.example.application.config.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".home.HomeActivity"/>
-
-        <activity android:name=".login.LoginMainActivity">
+        <activity android:name="com.example.bookreviewsver.MainActivity"> </activity>
+        <activity android:name=".src.Splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login.FindIdActivity"/>
-        <activity android:name=".login.FindId2Activity"/>
-        <activity android:name=".login.FindPasswordActivity"/>
-        <activity android:name=".login.FindPassword2Activity"/>
-        <activity android:name=".login.JoinActivity"/>
-
-        <activity android:name=".report.ReportListActivity"/>
-        <activity android:name=".report.ReportPostActivity"/>
-        <activity android:name=".report.ReportWriterActivity"/>
+        <activity android:name="com.example.bookreviewsver.src.report.login.LoginMainActivity"
+            android:windowSoftInputMode="adjustPan|adjustUnspecified">
+        </activity>
+        <activity android:name="com.example.bookreviewsver.src.Find.FindIdActivity"></activity>
+        <activity android:name="com.example.bookreviewsver.src.Find.FindId2Activity" />
+        <activity android:name="com.example.bookreviewsver.src.Find.FindPasswordActivity" />
+        <activity android:name="com.example.bookreviewsver.src.Find.FindPassword2Activity" />
+        <activity android:name="com.example.bookreviewsver.src.report.login.JoinActivity"></activity>
+        <activity android:name="com.example.bookreviewsver.src.report.ReportPostActivity"
+            android:parentActivityName=".src.report.ReportPostActivity"/>
+        <activity android:name="com.example.bookreviewsver.src.report.ReportWriteActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".src.Main.OCR.ReportExtractionActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name="com.example.bookreviewsver.src.Main.Book.BookDetailActivity"></activity>
+        <activity android:name=".src.home.OtherPageActivity"></activity>
+        <activity android:name="com.example.bookreviewsver.src.Main.OCR.Translate.TranslationActivity"
+            android:parentActivityName=".src.Main.OCR.ReportExtractionActivity"
+            />
+        <activity android:name=".src.Main.Chat.ChatActivity"></activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.bookreviewsver.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
     </application>
 
 </manifest>
