@@ -33,6 +33,7 @@ https://github.com/serim88/BOOKI
 4. 추천 도서
 해당 사용자의 읽을 책 데이터 기반으로 추천 도서를 보여준다.
 
+
 #### 도서 상세보기
 
 ![detail1_gif](https://user-images.githubusercontent.com/53509789/122339583-3eb6e500-cf7c-11eb-8444-1f9fdc118846.gif)
@@ -49,6 +50,7 @@ https://github.com/serim88/BOOKI
 4. 해당 도서 관련 독서 피드 / 채팅방
 - 드로어를 통해 해당 도서 관련 독서 피드, 해당 도서 관련 채팅방 목록 확인이 가능하다. 
 
+
 #### 독서 피드
 
 ![feed1__gif](https://user-images.githubusercontent.com/53509789/122339461-162eeb00-cf7c-11eb-9216-b09caaa7a112.gif)
@@ -63,6 +65,7 @@ https://github.com/serim88/BOOKI
 4. 다른 유저의 서재로 이동 
 - 피드 목록, 피드 상세보기 페이지, 피드 댓글의 작성자 아이디를 누르면 해당 아이디의 서재로 이동한다.
 
+
 #### 글자 추출 및 번역
 
 ![translate_gif](https://user-images.githubusercontent.com/53509789/122339511-247d0700-cf7c-11eb-9b2e-e66bcb396968.gif)
@@ -72,6 +75,7 @@ https://github.com/serim88/BOOKI
 2. 번역 ( 파파고 api)
 - 추출한 글자 혹은 입력을 통해 원하는 언어로 번역이 가능하다.
 
+
 #### 채팅
 
 ![chat_gif](https://user-images.githubusercontent.com/53509789/122339524-2a72e800-cf7c-11eb-910c-7af10c39a589.gif)
@@ -80,6 +84,7 @@ https://github.com/serim88/BOOKI
 - 내가 참여한 채팅방 목록을 보여준다.
 2. 해당 도서 채팅방 목록
 - 해당 도서 관련 채팅방 목록을 보여준다.
+
 
 #### 나의 서재 (마이 페이지)
 
@@ -93,6 +98,7 @@ https://github.com/serim88/BOOKI
 3. 독서 피드 현황
 - 탭 레이아웃을 통해 나의 피드, 내가 좋아요한 피드 리스트를 구분하여 보여준다.
 - 해당 사용자가 비밀글로 설정한 글은 이 곳에만 보여진다.
+
 
 #### 다른 유저의 서재
 1. 사용자 정보
